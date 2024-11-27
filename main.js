@@ -3,11 +3,13 @@ const contenedor = document.getElementById("contenedor")
 const boton = document.getElementById("boton")
 const display = document.getElementById("para-escribir")
 
-numeroRandom.innerText = "0"
+
 
 boton.addEventListener("click", () =>{
     let aleatorio = Math.floor(Math.random() * 100)
     numeroRandom.innerText = aleatorio  
+      numeroRandom.style.display = 'none'
+    
 })
 
 
@@ -44,6 +46,7 @@ contenedor.addEventListener("submit", function(event){
     }
     display.value = ""
 
-    
+      numeroRandom.style.display = 'block'
 
+   
 })
